@@ -7,6 +7,7 @@ let comidaX=0;
 let comidaY=0;
 let puntaje=0;
 let tiempo=10;
+let intervalo;
 
 const ALTO_GATO=50;
 const ANCHO_GATO=50;
@@ -79,6 +80,14 @@ function detectarColision(){
     //alert("ATRAPADO!!");
         puntaje=puntaje+1;
         mostrarEnSpan("puntos",puntaje);
+        
+        tiempo=10;
+        mostrarEnSpan("tiempo",tiempo);
+       
+        if(puntaje==6){
+            alert("GANASTE!!");
+            clearInterval(intervalo);
+        }
     aparecerComida();
     }
 }
@@ -94,6 +103,24 @@ function aparecerComida(){
 function restarTiempo(){
     tiempo=tiempo-1
     mostrarEnSpan("tiempo",tiempo);
+
+    if (tiempo==0){
+        alert("GAME OVER");
+        clearInterval(intervalo);
+    }
 }
 
-setInterval(restarTiempo,1000)
+intervalo=setInterval(restarTiempo,1000)
+
+function reiniciar(){
+    gatoX=0;
+    gatoY=0;
+    comidaX=0;
+    comidaY=0;
+    puntaje=0;
+    tiempo=10;
+    mostrarEnSpan("puntos",puntaje);
+    mostrarEnSpan("tiempo",tiempo);
+    limpiarCanva();
+    iniciarJuego(); 
+}
