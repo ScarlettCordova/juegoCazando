@@ -5,7 +5,8 @@ let gatoX=0;
 let gatoY=0;
 let comidaX=0;
 let comidaY=0;
-let puntaje=0
+let puntaje=0;
+let tiempo=10;
 
 const ALTO_GATO=50;
 const ANCHO_GATO=50;
@@ -89,3 +90,10 @@ function aparecerComida(){
     graficarGato()
     graficarComida()
 }
+
+function restarTiempo(){
+    tiempo=tiempo-1
+    mostrarEnSpan("tiempo",tiempo);
+}
+
+setInterval(restarTiempo,1000)
