@@ -1,0 +1,4 @@
+1. Actúa como diseñador gráfico, mejora la parte visual,
+dandole un aspecto de videojuego antiguo, con colores rosa pastel,
+y el tipo de letra igual q sea grande y llamativo, modifica el html y el cs,
+no cambies los ids de los componentes, manten separados los css y el html.

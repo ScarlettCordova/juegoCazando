@@ -15,6 +15,8 @@ const ALTO_COMIDA=30;
 const ANCHO_COMIDA=30;
 
 function iniciarJuego(){
+    clearInterval(intervalo)
+    intervalo=setInterval(restarTiempo,1000)
     gatoX = (canvas.width/2)-(ANCHO_GATO/2);
     gatoY = (canvas.height/2)-(ALTO_GATO/2);
     comidaX= canvas.width-ANCHO_COMIDA
@@ -110,7 +112,7 @@ function restarTiempo(){
     }
 }
 
-intervalo=setInterval(restarTiempo,1000)
+
 
 function reiniciar(){
     gatoX=0;

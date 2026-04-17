@@ -1,42 +1,82 @@
+/* Fuente estilo retro */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
   text-align: center;
-  font-family: Arial, sans-serif;
-  background: #f0f0f0;
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(180deg, #ffd1dc, #ffb6c1);
   margin: 0;
   padding: 20px;
+  color: #fff;
 }
 
+/* Título estilo arcade */
 h1 {
-  margin-bottom: 5px;
+  font-size: 28px;
+  color: #ff69b4;
+  text-shadow: 3px 3px #000;
+  margin-bottom: 10px;
 }
 
+.autor {
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Panel de info */
 .panel {
-  margin: 15px 0;
-  font-size: 18px;
+  margin: 20px 0;
+  font-size: 14px;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
+  background: rgba(255, 105, 180, 0.3);
+  padding: 10px;
+  border: 3px solid #ff69b4;
+  box-shadow: 4px 4px #000;
 }
 
+/* Canvas estilo consola */
 canvas {
-  background: white;
-  border: 2px solid black;
+  background: #fff0f5;
+  border: 5px solid #ff69b4;
+  box-shadow: 6px 6px #000;
 }
 
+/* Controles */
 .controles {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
+/* Botones estilo pixel */
 button {
-  margin: 5px;
-  padding: 10px 16px;
-  font-size: 18px;
+  margin: 6px;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-family: 'Press Start 2P', cursive;
   cursor: pointer;
+  background: #ff69b4;
+  color: white;
+  border: 3px solid black;
+  box-shadow: 3px 3px #000;
+  transition: all 0.1s ease;
 }
 
+button:hover {
+  background: #ff1493;
+}
+
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px #000;
+}
+
+/* Mensaje final */
 #mensaje {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
-  color: darkred;
-  margin-top: 15px;
+  color: #fff;
+  text-shadow: 2px 2px #ff1493;
+  margin-top: 20px;
 }
