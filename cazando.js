@@ -6,7 +6,7 @@ let gatoY=0;
 let comidaX=0;
 let comidaY=0;
 let puntaje=0;
-let tiempo=10;
+let tiempo=15;
 let intervalo;
 
 const ALTO_GATO=50;
