@@ -83,8 +83,30 @@ function detectarColision(){
         puntaje=puntaje+1;
         mostrarEnSpan("puntos",puntaje);
         
-        tiempo=15;
-        mostrarEnSpan("tiempo",tiempo);
+        //tiempo=15;
+        //mostrarEnSpan("tiempo",tiempo);
+
+        if (puntaje==1){
+            tiempo=14
+            mostrarEnSpan("tiempo",tiempo);
+        }
+        if (puntaje==2){
+            tiempo=13
+            mostrarEnSpan("tiempo",tiempo);
+        }
+        if (puntaje==3){
+            tiempo=12
+            mostrarEnSpan("tiempo",tiempo);
+        }
+        if (puntaje==4){
+            tiempo=11
+            mostrarEnSpan("tiempo",tiempo);
+        }
+        if (puntaje==5){
+            tiempo=10
+            mostrarEnSpan("tiempo",tiempo);
+        }
+
        
         if(puntaje==6){
             alert("GANASTE!!");
