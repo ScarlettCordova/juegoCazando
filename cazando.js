@@ -9,6 +9,9 @@ let puntaje=0;
 let tiempo=15;
 let intervalo;
 
+let imagenGato=new Image();
+imagenGato.src="gato.png"
+
 const ALTO_GATO=50;
 const ANCHO_GATO=50;
 const ALTO_COMIDA=30;
@@ -31,7 +34,7 @@ function graficarRectangulo(x,y,ancho,alto,color){
 }
 
 function graficarGato(){
-    graficarRectangulo(gatoX,gatoY,ANCHO_GATO,ALTO_GATO,"black")    
+    ctx.drawImage(imagenGato,gatoX,gatoY,ANCHO_GATO,ALTO_GATO);    
 }
 
 function graficarComida(){
@@ -83,30 +86,29 @@ function detectarColision(){
         puntaje=puntaje+1;
         mostrarEnSpan("puntos",puntaje);
         
-        //tiempo=15;
+        //tiempo=10;
         //mostrarEnSpan("tiempo",tiempo);
 
         if (puntaje==1){
-            tiempo=14
+            tiempo=14;
             mostrarEnSpan("tiempo",tiempo);
         }
         if (puntaje==2){
-            tiempo=13
+            tiempo=13;
             mostrarEnSpan("tiempo",tiempo);
         }
         if (puntaje==3){
-            tiempo=12
+            tiempo=12;
             mostrarEnSpan("tiempo",tiempo);
         }
         if (puntaje==4){
-            tiempo=11
+            tiempo=11;
             mostrarEnSpan("tiempo",tiempo);
         }
         if (puntaje==5){
-            tiempo=10
+            tiempo=10;
             mostrarEnSpan("tiempo",tiempo);
         }
-
        
         if(puntaje==6){
             alert("GANASTE!!");
