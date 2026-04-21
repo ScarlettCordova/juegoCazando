@@ -12,6 +12,9 @@ let intervalo;
 let imagenGato=new Image();
 imagenGato.src="gato.png"
 
+let imagenComida=new Image();
+imagenComida.src ="comida.png"
+
 const ALTO_GATO=50;
 const ANCHO_GATO=50;
 const ALTO_COMIDA=30;
@@ -24,8 +27,10 @@ function iniciarJuego(){
     gatoY = (canvas.height/2)-(ALTO_GATO/2);
     comidaX= canvas.width-ANCHO_COMIDA
     comidaY= canvas.height-ALTO_COMIDA
+
     graficarGato();
     graficarComida();
+
 }
 
 function graficarRectangulo(x,y,ancho,alto,color){
@@ -38,8 +43,8 @@ function graficarGato(){
 }
 
 function graficarComida(){
-    graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA,"yellow")    
-}
+    ctx.drawImage(imagenComida, comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA)    
+};
 
 function moverIzquierda(){
     gatoX=gatoX-10
