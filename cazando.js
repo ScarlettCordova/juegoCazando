@@ -83,7 +83,7 @@ function detectarColision(){
         puntaje=puntaje+1;
         mostrarEnSpan("puntos",puntaje);
         
-        tiempo=10;
+        tiempo=15;
         mostrarEnSpan("tiempo",tiempo);
        
         if(puntaje==6){
@@ -120,7 +120,7 @@ function reiniciar(){
     comidaX=0;
     comidaY=0;
     puntaje=0;
-    tiempo=10;
+    tiempo=15;
     mostrarEnSpan("puntos",puntaje);
     mostrarEnSpan("tiempo",tiempo);
     limpiarCanva();
